@@ -1,0 +1,25 @@
+#These settings are used only for local dev
+# Use with the DB set up in localdev.yml (See README.md)
+logging:
+  level:
+    # Hides HHH000424: Disabling contextual LOB creation as createClob() method threw error
+    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: WARN
+
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: localdev
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      properties:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    change-log: classpath:/db/changelog/master.yml
