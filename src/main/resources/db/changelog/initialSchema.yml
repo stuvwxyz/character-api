@@ -1,0 +1,198 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: stuvwxyz
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: character_id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_name
+                  type: VARCHAR(255)
+              - column:
+                  name: character_age
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_gender
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_race
+                  type: VARCHAR(255)
+              - column:
+                  name: character_description
+                  type: TEXT
+              - column:
+                  name: character_purpose
+                  type: TEXT
+              - column:
+                  name: character_background
+                  type: TEXT
+              - column:
+                  name: character_notes
+                  type: TEXT
+              - column:
+                  name: character_alive
+                  type: TEXT
+            tableName: character
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: location_id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_location
+                  type: TEXT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_terrain
+                  type: TEXT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_notes
+                  type: TEXT
+            tableName: location
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: organization_id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_notes
+                  type: TEXT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_purpose
+                  type: TEXT
+            tableName: organization
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_id_assoc
+                  type: BIGINT
+            tableName: character_to_character
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_id
+                  type: BIGINT
+            tableName: character_to_organization
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: character_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_id
+                  type: BIGINT
+            tableName: character_to_location
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_id
+                  type: BIGINT
+            tableName: location_to_organization
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: organization_id_assoc
+                  type: BIGINT
+            tableName: organization_to_organization
