@@ -148,7 +148,7 @@ databaseChangeLog:
                  value: "Never had to work for anything since he was a prince."
              - column:
                  name: character_notes
-                 value: "Lies and is ultimatly cowardly"
+                 value: "Lies and is ultimately cowardly"
              - column:
                  name: character_alive
                  value: "Alive"
