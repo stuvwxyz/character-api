@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
-@RequestMapping("/character")
+@RequestMapping("/api/character")
 public class CharacterController {
     @Autowired
     private CharacterRepository characterRepository;
