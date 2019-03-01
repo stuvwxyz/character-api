@@ -10,4 +10,5 @@ public class HealthController {
   String health() {
       return "Healthy";
   }
+
 }
