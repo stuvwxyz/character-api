@@ -17,6 +17,7 @@ public class Character {
     private String characterAge;
     private String characterGender;
     private String characterRace;
+    private String characterRelations;
     private String characterDescription;
     private String characterPurpose;
     private String characterBackground;
@@ -57,6 +58,14 @@ public class Character {
 
     public void setCharacterRace(String characterRace) {
         this.characterRace = characterRace;
+    }
+
+    public String getCharacterRelations() {
+        return characterRelations;
+    }
+
+    public void setCharacterRelations(String characterRelations) {
+        this.characterRelations = characterRelations;
     }
 
     public String getcharacterDescription() {
