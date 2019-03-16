@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.2
+      author: stuvwxyz
+      changes:
+       - insert:
+           columns:
+             - column:
+                 name: location_name
+                 value: "Hillcrest"
+             - column:
+                 name: location_location
+                 value: "In the Kingdom of Cheshire"
+             - column:
+                 name: location_terrain
+                 value: "City"
+             - column:
+                 name: location_notes
+                 value: "Densly populated.  Tens of thousands of citizens"
+           tableName: location
+       - insert:
+           columns:
+             - column:
+                 name: location_name
+                 value: "Westport"
+             - column:
+                 name: location_location
+                 value: "Island Kingdom of Frasler"
+             - column:
+                 name: location_terrain
+                 value: "Sea Port"
+             - column:
+                 name: location_notes
+                 value: "Mostly a small fishing villiage but had a decent amount of trade moving through the port."
+           tableName: location
+       - insert:
+           columns:
+             - column:
+                 name: location_name
+                 value: "Skull Rock"
+             - column:
+                 name: location_location
+                 value: "Island that is shaped like a skull"
+             - column:
+                 name: location_terrain
+                 value: "Baren but always has carrion birds circling it"
+             - column:
+                 name: location_notes
+                 value: "The rocks and currents are dangerous so ships, cargo, and people wash up on the island"
+           tableName: location
+       - insert:
+           columns:
+             - column:
+                 name: location_name
+                 value: "Frost Giant Mountain Resort"
+             - column:
+                 name: location_location
+                 value: "Great Divide mountain range"
+             - column:
+                 name: location_terrain
+                 value: "very rocky and little grows.  There is winter all year around"
+             - column:
+                 name: location_notes
+                 value: "Family resort.  Wealthy knights take their children here to have them learn to hunt mountain beasts."
+           tableName: location
+       - insert:
+           columns:
+             - column:
+                 name: location_name
+                 value: "Twixt"
+             - column:
+                 name: location_location
+                 value: "Elusive, some people say it is betwixt here and there"
+             - column:
+                 name: location_terrain
+                 value: "Dense mist and marshy ground."
+             - column:
+                 name: location_notes
+                 value: "The only way to find it is to travel until you are nowhere but are betwixt other places."
+           tableName: location
