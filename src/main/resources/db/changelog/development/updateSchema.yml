@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: stuvwxyz
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: character_relations
+                  type: TEXT
+            tableName: character
