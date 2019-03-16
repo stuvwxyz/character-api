@@ -19,7 +19,7 @@ public class CharacterController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Character> getAllCharacters() {
-        return characterRepository.findAll();
+        return characterRepository.findAllByOrderByCharacterNameAsc();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
