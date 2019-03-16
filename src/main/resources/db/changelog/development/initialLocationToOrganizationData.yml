@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.7
+      author: stuvwxyz
+      changes:
+        - insert:
+           columns:
+             - column:
+                 name: location_id
+                 value: 1
+             - column:
+                 name: organization_id
+                 value: 1
+           tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 2
+              - column:
+                  name: organization_id
+                  value: 1
+            tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 2
+              - column:
+                  name: organization_id
+                  value: 5
+            tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 5
+              - column:
+                  name: organization_id
+                  value: 5
+            tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 5
+              - column:
+                  name: organization_id
+                  value: 3
+            tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 3
+              - column:
+                  name: organization_id
+                  value: 3
+            tableName: location_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: location_id
+                  value: 1
+              - column:
+                  name: organization_id
+                  value: 4
+            tableName: location_to_organization

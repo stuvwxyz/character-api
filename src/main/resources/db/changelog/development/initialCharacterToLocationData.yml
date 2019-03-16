@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.4
+      author: stuvwxyz
+      changes:
+        - insert:
+           columns:
+             - column:
+                 name: character_id
+                 value: 1
+             - column:
+                 name: location_id
+                 value: 1
+           tableName: character_to_location
+        - insert:
+            columns:
+              - column:
+                  name: character_id
+                  value: 1
+              - column:
+                  name: location_id
+                  value: 2
+            tableName: character_to_location
+        - insert:
+            columns:
+              - column:
+                  name: character_id
+                  value: 2
+              - column:
+                  name: location_id
+                  value: 1
+            tableName: character_to_location
+        - insert:
+            columns:
+              - column:
+                  name: character_id
+                  value: 6
+              - column:
+                  name: location_id
+                  value: 4
+            tableName: character_to_location
+        - insert:
+            columns:
+              - column:
+                  name: character_id
+                  value: 4
+              - column:
+                  name: location_id
+                  value: 3
+            tableName: character_to_location
