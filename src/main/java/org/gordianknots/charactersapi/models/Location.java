@@ -14,8 +14,10 @@ public class Location {
     @ReadOnlyProperty
     private Long locationId;
     private String locationName;
+    private String locationSize;
     private String locationLocation;
     private String locationTerrain;
+    private String locationFactions;
     private String locationNotes;
 
     public Long getLocationId() {
@@ -34,6 +36,14 @@ public class Location {
         this.locationName = locationName;
     }
 
+    public String getLocationSize() {
+        return locationSize;
+    }
+
+    public void setLocationSize(String locationSize) {
+        this.locationSize = locationSize;
+    }
+
     public String getLocationLocation() {
         return locationLocation;
     }
@@ -48,6 +58,14 @@ public class Location {
 
     public void setLocationTerrain(String locationTerrain) {
         this.locationTerrain = locationTerrain;
+    }
+
+    public String getLocationFactions() {
+        return locationFactions;
+    }
+
+    public void setLocationFactions(String locationFactions) {
+        this.locationFactions = locationFactions;
     }
 
     public String getLocationNotes() {
