@@ -18,8 +18,12 @@ public class Location {
     private String locationTerrain;
     private String locationNotes;
 
-    public Long getLocationID() {
+    public Long getLocationId() {
         return locationId;
+    }
+
+    public void setLocationId(Long locationId) {
+        this.locationId = locationId;
     }
 
     public String getLocationName() {
