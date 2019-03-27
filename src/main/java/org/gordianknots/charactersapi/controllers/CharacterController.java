@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
@@ -19,7 +17,7 @@ public class CharacterController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Character> getAllCharacters() {
-        return characterRepository.findAll();
+        return characterRepository.findAllByOrderByCharacterNameAsc();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
