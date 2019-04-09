@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.3
+      author: stuvwxyz
+      changes:
+       - insert:
+           columns:
+             - column:
+                 name: organization_name
+                 value: "Shephards of the flocks of nighttime feathered birds"
+             - column:
+                 name: organization_notes
+                 value: "In the Kingdom of Cheshire"
+             - column:
+                 name: organization_purpose
+                 value: "To taste all of the different feathered birds in the kingdom"
+           tableName: organization
+       - insert:
+           columns:
+             - column:
+                 name: organization_name
+                 value: "Panda Puppies"
+             - column:
+                 name: organization_notes
+                 value: "They are mostly harmless but are dedicated"
+             - column:
+                 name: organization_purpose
+                 value: "To dye as many puppies to look like pandas as possible"
+           tableName: organization
+       - insert:
+           columns:
+             - column:
+                 name: organization_name
+                 value: "Knight of the square table with rounded edges"
+             - column:
+                 name: organization_notes
+                 value: "The follow King Arthur of and his pedded up dragons"
+             - column:
+                 name: organization_purpose
+                 value: "To finaly put all of the dragons into a pen"
+           tableName: organization
+       - insert:
+           columns:
+             - column:
+                 name: organization_name
+                 value: "Secret Society of mythological creatures"
+             - column:
+                 name: organization_notes
+                 value: "You are not allowed to know since they are secret"
+             - column:
+                 name: organization_purpose
+                 value: "Shhhh, its a secret"
+           tableName: organization
+       - insert:
+           columns:
+             - column:
+                 name: organization_name
+                 value: "Demons Are Mostly Musunderstood (DAMM)"
+             - column:
+                 name: organization_notes
+                 value: "They are trying to get the word out but it is not well received.  Many temples have them removed if possible when they encounter them."
+             - column:
+                 name: organization_purpose
+                 value: "To help people understand that demons are not really bad, they just follow their nature.  Much the same way a bear wasp does."
+           tableName: organization

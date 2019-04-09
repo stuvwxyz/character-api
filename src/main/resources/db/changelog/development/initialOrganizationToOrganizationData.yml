@@ -1,0 +1,86 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.8
+      author: stuvwxyz
+      changes:
+        - insert:
+           columns:
+             - column:
+                 name: organization_id
+                 value: 1
+             - column:
+                 name: organization_id_assoc
+                 value: 1
+           tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 1
+              - column:
+                  name: organization_id_assoc
+                  value: 4
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 1
+              - column:
+                  name: organization_id_assoc
+                  value: 3
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 5
+              - column:
+                  name: organization_id_assoc
+                  value: 5
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 5
+              - column:
+                  name: organization_id_assoc
+                  value: 3
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 3
+              - column:
+                  name: organization_id_assoc
+                  value: 3
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 3
+              - column:
+                  name: organization_id_assoc
+                  value: 5
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 2
+              - column:
+                  name: organization_id_assoc
+                  value: 3
+            tableName: organization_to_organization
+        - insert:
+            columns:
+              - column:
+                  name: organization_id
+                  value: 4
+              - column:
+                  name: organization_id_assoc
+                  value: 4
+            tableName: organization_to_organization

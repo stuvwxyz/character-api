@@ -196,3 +196,28 @@ databaseChangeLog:
                   name: organization_id_assoc
                   type: BIGINT
             tableName: organization_to_organization
+
+  - changeSet:
+      id: 2
+      author: stuvwxyz
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: character_relations
+                  type: TEXT
+            tableName: character
+
+  - changeSet:
+      id: 2.1
+      author: stuvwxyz
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: location_factions
+                  type: TEXT
+              - column:
+                  name: location_size
+                  type: TEXT
+            tableName: location
