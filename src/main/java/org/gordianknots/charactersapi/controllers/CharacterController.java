@@ -1,14 +1,14 @@
 package org.gordianknots.charactersapi.controllers;
 
 import org.gordianknots.charactersapi.models.Character;
+import org.gordianknots.charactersapi.models.CharacterToLocation;
+import org.gordianknots.charactersapi.repositories.CharacterToLocationRepository;
 import org.gordianknots.charactersapi.repositories.CharacterRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
@@ -16,10 +16,20 @@ import java.util.stream.Collectors;
 public class CharacterController {
     @Autowired
     private CharacterRepository characterRepository;
+    @Autowired
+    private CharacterToLocationRepository characterToLocationRepository;
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Character> getAllCharacters() {
         return characterRepository.findAllByOrderByCharacterNameAsc();
+    }
+
+    @RequestMapping(value = "/location", method = RequestMethod.GET)
+    public List<CharacterToLocation> getAllCharacterToLocation() {return characterToLocationRepository.findAll();}
+
+    @RequestMapping(value = "/{id}/location", method = RequestMethod.GET)
+    public List<CharacterToLocation> getALocation(@PathVariable Long id) {
+        return characterToLocationRepository.findAllByCharacterId(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
