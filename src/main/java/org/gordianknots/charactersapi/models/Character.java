@@ -2,10 +2,8 @@ package org.gordianknots.charactersapi.models;
 
 import org.springframework.data.annotation.ReadOnlyProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Character {
@@ -23,6 +21,21 @@ public class Character {
     private String characterBackground;
     private String characterNotes;
     private String characterAlive;
+
+    @OneToMany
+    @JoinTable(name = "character_to_location",
+            joinColumns = @JoinColumn(name = "characterId", referencedColumnName = "characterId"),
+            inverseJoinColumns = @JoinColumn(name = "locationId", referencedColumnName = "locationId"))
+    private List<Location> characterLocations;
+
+
+    public List<Location> getCharacterLocations() {
+        return characterLocations;
+    }
+
+    public void setCharacterLocations(List<Location> characterLocations) {
+        this.characterLocations = characterLocations;
+    }
 
     public Long getCharacterId() {
         return characterId;
