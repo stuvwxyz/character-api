@@ -1,0 +1,185 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: stuvwxyz
+      changes:
+       - insert:
+          columns:
+            - column:
+                name: character_name
+                value: "Harold"
+            - column:
+                name: character_age
+                value: "around 20"
+            - column:
+                name: character_gender
+                value: "Male"
+            - column:
+                name: character_race
+                value: "Human"
+            - column:
+                name: character_description
+                value: "Wears Hats"
+            - column:
+                name: character_purpose
+                value: "To acquire more hats"
+            - column:
+                name: character_background
+                value: "His father's haberdashery burned down while he was away"
+            - column:
+                name: character_notes
+                value: "He knows what a haberdashery is"
+            - column:
+                name: character_alive
+                value: "Alive"
+          tableName: character
+       - insert:
+           columns:
+             - column:
+                 name: character_name
+                 value: "Jeffery"
+             - column:
+                 name: character_age
+                 value: "ancient"
+             - column:
+                 name: character_gender
+                 value: "?"
+             - column:
+                 name: character_race
+                 value: "?"
+             - column:
+                 name: character_description
+                 value: "Stooped over and walks with a cane"
+             - column:
+                 name: character_purpose
+                 value: "To get people off of his lawn"
+             - column:
+                 name: character_background
+                 value: "unknown"
+             - column:
+                 name: character_notes
+                 value: "mumbles a lot about youngins"
+             - column:
+                 name: character_alive
+                 value: "Undead"
+           tableName: character
+       - insert:
+           columns:
+             - column:
+                 name: character_name
+                 value: "Waldo"
+             - column:
+                 name: character_age
+                 value: "From the 80s"
+             - column:
+                 name: character_gender
+                 value: "Male"
+             - column:
+                 name: character_race
+                 value: "Human"
+             - column:
+                 name: character_description
+                 value: "Wears red and white stripes"
+             - column:
+                 name: character_purpose
+                 value: "to blend in and infiltrate"
+             - column:
+                 name: character_background
+                 value: ""
+             - column:
+                 name: character_notes
+                 value: "has an evil twin that wears yellow and black"
+             - column:
+                 name: character_alive
+                 value: "Unknown"
+           tableName: character
+       - insert:
+           columns:
+             - column:
+                 name: character_name
+                 value: "Fwyffynyff"
+             - column:
+                 name: character_age
+                 value: "about 120"
+             - column:
+                 name: character_gender
+                 value: "Female"
+             - column:
+                 name: character_race
+                 value: "Elf"
+             - column:
+                 name: character_description
+                 value: "Female wild elf"
+             - column:
+                 name: character_purpose
+                 value: ""
+             - column:
+                 name: character_background
+                 value: "Grew up in the wilds but had moved into the city.  She is looking to find ways to have civilization stop expanding into her area."
+             - column:
+                 name: character_notes
+                 value: "Trained in both magic and sword. (Swordsinger)"
+             - column:
+                 name: character_alive
+                 value: "Alive"
+           tableName: character
+       - insert:
+           columns:
+             - column:
+                 name: character_name
+                 value: "Prince Humberdink"
+             - column:
+                 name: character_age
+                 value: "around 30"
+             - column:
+                 name: character_gender
+                 value: "Male"
+             - column:
+                 name: character_race
+                 value: "Human"
+             - column:
+                 name: character_description
+                 value: "Narcisistic, wears kingly robes and accessories of office"
+             - column:
+                 name: character_purpose
+                 value: "To defeat the Dread Pirate Roberts and claim Princess Buttercup"
+             - column:
+                 name: character_background
+                 value: "Never had to work for anything since he was a prince."
+             - column:
+                 name: character_notes
+                 value: "Lies and is ultimately cowardly"
+             - column:
+                 name: character_alive
+                 value: "Alive"
+           tableName: character
+       - insert:
+           columns:
+             - column:
+                 name: character_name
+                 value: "Peter Cottontail"
+             - column:
+                 name: character_age
+                 value: "ageless"
+             - column:
+                 name: character_gender
+                 value: "Male"
+             - column:
+                 name: character_race
+                 value: "Immortal Bunny Avatar"
+             - column:
+                 name: character_description
+                 value: "Two floppy ears and a cotton tail"
+             - column:
+                 name: character_purpose
+                 value: "Plant eggs for all the good little girls and boys to find"
+             - column:
+                 name: character_background
+                 value: "Goes hopping down the bunny trail"
+             - column:
+                 name: character_notes
+                 value: "Awwwwwwdorable"
+             - column:
+                 name: character_alive
+                 value: "Immortal"
+           tableName: character
