@@ -121,4 +121,8 @@ public class Character {
     public void setCharacterAlive(String characterAlive) {
         this.characterAlive = characterAlive;
     }
+
+    public void listAllLocationsFromCharacterId(List<Location> characterLocations) {
+        this.characterLocations = characterLocations;
+    }
 }

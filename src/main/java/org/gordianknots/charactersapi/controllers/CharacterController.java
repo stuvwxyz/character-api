@@ -1,6 +1,7 @@
 package org.gordianknots.charactersapi.controllers;
 
 import org.gordianknots.charactersapi.models.Character;
+import org.gordianknots.charactersapi.models.Location;
 //import org.gordianknots.charactersapi.models.CharacterToLocation;
 //import org.gordianknots.charactersapi.repositories.CharacterToLocationRepository;
 import org.gordianknots.charactersapi.repositories.CharacterRepository;
@@ -16,6 +17,8 @@ import java.util.List;
 public class CharacterController {
     @Autowired
     private CharacterRepository characterRepository;
+//    @Autowired
+//    private CharacterRepositoryCustom characterRepositoryCustom;
 //    @Autowired
 //    private CharacterToLocationRepository characterToLocationRepository;
 
@@ -33,14 +36,21 @@ public class CharacterController {
 //    }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Character get(@PathVariable Long id) {
+    public Character get(@PathVariable Long id) {        
         return characterRepository.findById(id).orElse(null);
+    }
+
+    @RequestMapping(value = "/{id}/locations", method = RequestMethod.GET)
+    public List<Location> getLocationList(@PathVariable Long id) {
+        List<Location> characterLocations;
+        characterLocations = characterRepository.listAllLocationsFromCharacterId(id, characterRepository);        
+        return characterLocations;       
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public Character create(@RequestBody Character character) {
         return characterRepository.save(character);
-    }
+    }    
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public Character update(@PathVariable Long id, @RequestBody Character character) {
@@ -50,10 +60,10 @@ public class CharacterController {
             existingCharacter = characterRepository.save(existingCharacter);
         }
         return existingCharacter;
-    }
+    }   
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         characterRepository.delete(characterRepository.findById(id).orElse(null));
-    }
+    }   
 }
